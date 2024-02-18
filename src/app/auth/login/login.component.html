@@ -1,0 +1,53 @@
+
+
+<section class="login-bg" >
+
+  
+  
+  <form class="input-box"> 
+  
+    <div class="login-box">
+      <img class="login-logo" src="../../../assets/images/logo.svg" alt="">
+      <p class="login-content">Welcome to Digitalflake Admin</p>
+      <!-- <br /> -->
+      <div class="login-margin"></div>
+  
+       <div class="login-height">
+        <mat-form-field class="login-form" appearance="outline">
+          <mat-label>Email ID</mat-label>
+          <input matInput type='email' #email name="email" id="email"   placeholder="Email ID"  autocomplete="off" required />
+        </mat-form-field>
+       </div>
+
+
+      <mat-form-field class="login-form" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" #password  placeholder="Password" name="passsword" class="input" autocomplete="off" id="passsword" required />
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <p class="forget">Forget Password?</p>
+      <button mat-raised-button color="primary" class="login-button" (click)="signIn()" >Login</button>
+  </div>
+    
+  </form>
+  
+  <!-- <div>
+    <h3>Login</h3>
+    <form  class="contact-form" >
+      <div class="input-group first">
+        <label class="user-label">Username: </label>
+        <input type="email" #email name="email" id="email" class="input" autocomplete="off" required>
+    </div>
+    <div class="input-group">
+        <label for="password" class="user-label">Password: </label>
+        <input type="password" #password name="passsword" class="input" autocomplete="off"
+            id="passsword" required>
+    </div>
+    <button type="button" (click)="signIn()" >Login</button>
+</form>
+</div> -->
+
+
+</section>

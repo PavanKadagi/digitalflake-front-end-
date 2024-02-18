@@ -1,0 +1,49 @@
+
+
+
+<header class="home-header">
+    <img class="home-logo" src="../../assets/images/logo-content.svg" alt="logo">
+    <img  class="home-profile" src="../../assets/images/profile.svg" (click)="openDialog()" alt="profile">
+    </header>
+<nav class="nav">
+    <ul>
+        <li routerLinkActive="active" class="nav-link"  routerLink="/home" >
+            <img class="nav-home" src="../../assets/images/home.svg" alt="home"> 
+            <p class="nav-content">Home</p>
+            <img class="nav-right-arrow" src="../../assets/images/right-arrow.svg" alt="right-arrow"> 
+        </li>
+        <li routerLinkActive="active" class="nav-link" routerLink="/category" >
+            <img class="nav-home" src="../../assets/images/category.svg" alt="category"> 
+            <p class="nav-content">Category</p>
+            <img class="nav-right-arrow" src="../../assets/images/right-arrow.svg" alt="right-arrow"> 
+        </li>
+        <li routerLinkActive="active" class="nav-link" routerLink="/product" >
+            <img class="nav-home" src="../../assets/images/products.svg" alt="product"> 
+            <p class="nav-content">Products</p>
+            <img class="nav-right-arrow" src="../../assets/images/right-arrow.svg" alt="right-arrow"> 
+        </li>
+    </ul>
+</nav>
+
+<section class="container">
+  <router-outlet></router-outlet>
+</section>
+
+
+
+
+<!-- <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/category">Category</a></li>
+    <li><a routerLink="/product">Product</a></li>
+    <li  >
+        <a *ngIf="!loginOrNot ; else logout" routerLink="/login">Login</a>
+        <ng-template #logout>
+            <a style="cursor: pointer;" (click)="logOut()" >Logout</a>
+        </ng-template>
+    </li>
+ 
+    
+</ul> -->
+
+

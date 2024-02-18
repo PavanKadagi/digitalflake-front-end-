@@ -1,0 +1,49 @@
+
+
+
+<div class="add-category">
+    <div class="heading">
+      <img (click)="onCancle()" style="cursor: pointer;" src="../../assets/images/left-arrow.svg" alt="left-arrow" />
+      <h4>Update Category</h4>
+    </div>
+  
+    <form #category="ngForm" (ngSubmit)="onCategory(category)">
+      <div class="form-content">
+        <mat-form-field class="category-form" appearance="outline">
+          <mat-label>Category Name</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Category Name"
+            name="categoryName"
+            [ngModel]="categoryName"
+            autocomplete="off"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field class="category-form" appearance="outline">
+          <mat-label>Description</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Description"
+            name="description"
+            [ngModel]="description"
+            autocomplete="off"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field  class="category-form" appearance="outline" >
+          <mat-label>Status</mat-label>
+          <mat-select [ngModel]="status" selected="status"  name="status" required >
+            <mat-option value="Active" >Active</mat-option>
+            <mat-option value="Inactive">Inactive</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="category-button">
+        <button type="button" mat-flat-button class="cancel-button" (click)="onCancle()" color="primary">Cancel</button>
+        <button type="submit" mat-flat-button  class="save-button" color="primary">Update</button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,17 @@
+.add-category form{
+    margin-top: 3%;
+    /* padding: 1%; */
+    gap: 1.2%;
+    /* height: 7; */
+    /* display: grid;
+    grid-template-columns: 33% 33% 33%; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-between;
+    flex-direction: column;
+    height: 85%;
+}
+
+.add-category .margin{
+    margin:2% 0% 20% 0%;
+}

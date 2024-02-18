@@ -1,0 +1,67 @@
+.home-header{
+    padding: 1.3% 1.5%;
+    width: 100%;
+    /* height: 20vh; */
+    background-color: #662671;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.home-header .home-logo{
+    height: 15%;
+    width: 15%;
+    cursor: pointer;
+}
+
+.home-header .home-profile{
+    height: 2.5%;
+    width: 2.5%;
+    cursor: pointer;
+}
+
+
+
+.nav{
+    position: relative;
+    top: 0vh;
+    width: 20%;
+    height: 89vh;
+    background-color: #f4f4f4;
+    z-index: 10;
+    padding: 1% .4%;
+    /* overflow:auto ; */
+}
+
+
+.nav .active{
+    background-color: #f4edaf;
+
+}
+
+.nav .nav-link{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding:1% 1%;
+    margin: 7%;
+}
+
+.nav .nav-home{
+    width: 10%;
+    height: 10%;
+    margin: 0% 7%;
+}
+
+.nav .nav-content{
+    font-weight: 400;
+    width: 20%;
+}
+
+.nav .nav-right-arrow{
+    width: 3.5%;
+    height: 3.5%;
+    margin-left: 50%;
+}

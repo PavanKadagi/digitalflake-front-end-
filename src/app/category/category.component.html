@@ -1,0 +1,105 @@
+<!-- <app-model *ngIf="modal" (close)="onClose()"  ></app-model> -->
+
+<div class="category">
+  <div class="category-heading">
+    <img
+      class="category-image"
+      src="../../assets/images/category-list.svg"
+      alt="category-list"
+    />
+    <p class="category-content">Category</p>
+
+    <!-- <mat-form-field class="category-search" appearance="outline"> -->
+    <input
+      matInput
+      class="category-input"
+      type="text"
+      #email
+      name="search"
+      id="search"
+      placeholder=""
+      autocomplete="off"
+      required
+    />
+    <img
+      class="category-search"
+      src="../../assets/images/search.svg"
+      alt="search"
+    />
+    <button
+      mat-raised-button
+      color="primary"
+      class="category-button"
+      (click)="addcategory()"
+    >
+      Add New
+    </button>
+
+    <!-- </mat-form-field> -->
+
+    <!-- <input type="text" class="category-input"  > -->
+  </div>
+
+  <table>
+    <thead>
+      <tr class="table-heading">
+        <th>
+          ID
+          <img
+            class="category-table-arrow"
+            src="../../assets/images/down-top-arrow.svg"
+            alt="down-top-arrow"
+          />
+        </th>
+        <th>
+          Name
+          <img
+            class="category-table-arrow"
+            src="../../assets/images/down-top-arrow.svg"
+            alt="down-top-arrow"
+          />
+        </th>
+        <th>
+          Description
+          <img
+            class="category-table-arrow"
+            src="../../assets/images/down-top-arrow.svg"
+            alt="down-top-arrow"
+          />
+        </th>
+        <th>
+          Status
+          <img
+            class="category-table-arrow"
+            src="../../assets/images/down-top-arrow.svg"
+            alt="down-top-arrow"
+          />
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-content" *ngFor="let item of category; let i = index">
+        <td>{{ item.id }}</td>
+        <td>{{ item.categoryName }}</td>
+        <td>{{ item.description }}</td>
+        <td [ngStyle]="{ color: item.status == 'Active' ? 'green' : 'red' }">
+          {{ item.status }}
+        </td>
+        <td class="category-actions">
+          <img
+            (click)="onEdit(item._id)"
+            src="../../assets/images/edit.svg"
+            alt="edit"
+          />
+          <img
+            *ngIf="item.status.toLowerCase() == 'active'"
+            (click)="openDialog(item._id)"
+            src="../../assets/images/delete.svg"
+            alt="delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
